@@ -12,6 +12,7 @@ import PrivateRoutes from './Pages/PrivateRoutes';
 import Checkout from './Pages/Checkout';
 import PaymentSuccess from './Pages/PaymentSuccess';
 import AddAddress from './Pages/AddAddress';
+import OrderPlaced from './Pages/OrderPlaced';
 
 function App() {
   return (
@@ -40,12 +41,14 @@ function App() {
                   <PaymentSuccess />
                 </PrivateRoutes>
               } />
+               <Route path="/order-placed" element={<PrivateRoutes><OrderPlaced /></PrivateRoutes>} />
               <Route path="/add-address" element={<PrivateRoutes><AddAddress /></PrivateRoutes>} />
               {/* <Route path='/login' element={<Loginpage />} /> */}
             </Routes>
             {/* </PrivateRoutes>
               } />
             </Routes>  */}
+           
           </CartPovider>
         </BrowserRouter>
       </AuthProvider>
